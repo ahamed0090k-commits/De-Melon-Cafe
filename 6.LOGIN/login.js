@@ -42,3 +42,26 @@ loginForm.addEventListener("submit", function (event) {
     window.location.href = "/1. HOME/1home.html";
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

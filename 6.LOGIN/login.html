@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN-UP PAGE</title>
-    <link rel="stylesheet" href="5signin.css">
+    <title>LOG-IN PAGE</title>
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!------------------------------------------------- header ------------------------------------------------------->
+    <!------------------------------------------------- HEADER ------------------------------------------------------->
 
     <header class="header">
 
@@ -27,16 +27,17 @@
         <nav>
             <ul>
                 <li><a href="/1. HOME/index.html">HOME</a></li>
-                <li><a href="/2. ABOUT/1about.html">ABOUT</a></li>
-                <li><a href="/3. MENU/1menu.html">MENU</a></li>
-                <li><a href="/5. CONTACT/1contact.html">CONTACT</a></li>
-                <li style="text-decoration:  underline;  color: #ff8c32;"><a href="/6.LOGIN/1login.html">LOGIN</a></li>
-
+                <li><a href="/2. ABOUT/about.html">ABOUT</a></li>
+                <li><a href="/3. MENU/menu.html">MENU</a></li>
+                <li><a href="/5. CONTACT/contact.html">CONTACT</a></li>
+                <li style="text-decoration: underline; color: #ff8c32;">
+                    <a href="/6.LOGIN/login.html">LOGIN</a>
+                </li>
             </ul>
         </nav>
 
         <div class="cart">
-            <a href="/3. MENU/1cart.html">
+            <a href="/3. MENU/cart.html">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="count">0</span>
             </a>
@@ -59,34 +60,50 @@
         <!-- form -->
         <form class="form">
 
-            <h2>Sign-Up Here</h2>
+            <h2>Login Here</h2>
 
-            <input type="text" name="fullname" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="email"
+                   name="email"
+                   placeholder="Enter Email Here"
+                   required><br>
 
-            <div class="password-box">
-                <input type="password" name="password" placeholder="Password" required>
-                <i class="fa-solid fa-eye toggle-password"></i>
-            </div>
+            <input type="password"
+                   name="password"
+                   placeholder="Enter Password Here"
+                   required>
 
-            <div class="password-box">
-                <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
-                <i class="fa-solid fa-eye toggle-password"></i>
-            </div>
-
-            <a href="/6.LOGIN/7pass.html" class="forgot">Forgot Password?</a>
+            <a href="/6.LOGIN/pass.html" class="forgot">
+                Forgot Password?
+            </a>
 
             <button type="submit" class="b2">Login</button>
 
             <p class="link">Don't have an accouunt ?</p>
-            <a class="sign" href="/6.LOGIN/1login.html">Log-In here</a>
+
+            <a class="sign" href="/6.LOGIN/signin.html">
+                Sign-Up here
+            </a>
+
             <p class="liw">Log in with</p>
 
             <div class="icon1">
-                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
+
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
             </div>
 
         </form>
@@ -95,7 +112,7 @@
 
 
 
-    <!------------------------------------------------- footer ------------------------------------------------------->
+    <!------------------------------------------------- FOOTER ------------------------------------------------------->
 
     <footer class="footer">
 
@@ -123,8 +140,6 @@
                     Discover a place where exceptional flavors meet heartfelt hospitality. We proudly serve handcrafted
                     coffee, freshly prepared meals, artisan pizzas, and irresistible desserts, creating memorable
                     experiences for every guest who walks through our doors.
-
-
                 </p>
 
             </div>
@@ -139,14 +154,13 @@
 
                     <li><a href="/1. HOME/index.html">Home</a></li>
 
-                    <li><a href="/2. ABOUT/1about.html">About</a></li>
+                    <li><a href="/2. ABOUT/about.html">About</a></li>
 
-                    <li><a href="/3. MENU/1menu.html">Menu</a></li>
+                    <li><a href="/3. MENU/menu.html">Menu</a></li>
 
-                    <li><a href="/5. CONTACT/1contact.html">Contact</a></li>
+                    <li><a href="/5. CONTACT/contact.html">Contact</a></li>
 
-                    <li><a href="/6.LOGIN/1login.html">Login</a></li>
-
+                    <li><a href="/6.LOGIN/login.html">Login</a></li>
 
                 </ul>
 
@@ -160,17 +174,17 @@
 
                 <ul>
 
-                    <li><a href="/3. MENU/1menu.html#starters">Starters</a></li>
+                    <li><a href="/3. MENU/menu.html#starters">Starters</a></li>
 
-                    <li><a href="/3. MENU/1menu.html#main-course">Main Course</a></li>
+                    <li><a href="/3. MENU/menu.html#main-course">Main Course</a></li>
 
-                    <li><a href="/3. MENU/1menu.html#pizza">Pizza</a></li>
+                    <li><a href="/3. MENU/menu.html#pizza">Pizza</a></li>
 
-                    <li><a href="/3. MENU/1menu.html#desserts">Desserts</a></li>
+                    <li><a href="/3. MENU/menu.html#desserts">Desserts</a></li>
 
-                    <li><a href="/3. MENU/1menu.html#beverages">Beverages</a></li>
+                    <li><a href="/3. MENU/menu.html#beverages">Beverages</a></li>
 
-                    <li><a href="/3. MENU/1menu.html#mocktails">Mocktails</a></li>
+                    <li><a href="/3. MENU/menu.html#mocktails">Mocktails</a></li>
 
                 </ul>
 
@@ -192,13 +206,21 @@
 
                 <div class="social-icons">
 
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
 
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
 
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
 
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
 
                 </div>
 
@@ -206,13 +228,10 @@
 
         </div>
 
-
     </footer>
 
-    <script src="6signin.js">
 
-    </script>
-
+    <script src="login.js"></script>
 
 </body>
 

@@ -1,17 +1,11 @@
 
-// ============================================================
-// DE MELON CAFE - CART JAVASCRIPT
-// ============================================================
-
-
 // Get cart from localStorage
 
 let cart = JSON.parse(localStorage.getItem("deMelonCart")) || [];
 
 
-// ============================================================
+
 // GET HTML ELEMENTS
-// ============================================================
 
 const cartContainer = document.getElementById("cartContainer");
 
@@ -32,9 +26,7 @@ const clearCartBtn = document.getElementById("clearCartBtn");
 const checkoutBtn = document.getElementById("checkoutBtn");
 
 
-// ============================================================
 // SAVE CART
-// ============================================================
 
 function saveCart() {
 
@@ -45,9 +37,7 @@ function saveCart() {
 
 }
 
-// ============================================================
 // UPDATE HEADER CART COUNT
-// ============================================================
 
 function updateCartCount() {
 
@@ -73,9 +63,7 @@ function updateCartCount() {
 }
 
 
-// ============================================================
 // DISPLAY CART
-// ============================================================
 
 function displayCart() {
 
@@ -179,9 +167,7 @@ function displayCart() {
 }
 
 
-// ============================================================
 // UPDATE TOTALS
-// ============================================================
 
 function updateTotals() {
 
@@ -228,9 +214,7 @@ function updateTotals() {
 }
 
 
-// ============================================================
 // PLUS / MINUS / REMOVE
-// ============================================================
 
 cartContainer.addEventListener("click", function(event) {
 
@@ -297,9 +281,7 @@ cartContainer.addEventListener("click", function(event) {
 });
 
 
-// ============================================================
 // CLEAR CART
-// ============================================================
 
 clearCartBtn.addEventListener("click", function() {
 
@@ -329,9 +311,7 @@ clearCartBtn.addEventListener("click", function() {
 });
 
 
-// ============================================================
 // INITIAL LOAD
-// ============================================================
 
 displayCart();
 

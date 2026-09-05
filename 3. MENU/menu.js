@@ -1,43 +1,33 @@
 
-// ============================================================
-// DE MELON CAFE - MENU JAVASCRIPT
-// ============================================================
-
 // Get cart from localStorage
 let cart = JSON.parse(localStorage.getItem("deMelonCart")) || [];
 
 
-// ============================================================
 // UPDATE HEADER CART COUNT
-// ============================================================
 
 function updateCartCount() {
 
     let totalItems = 0;
 
-    cart.forEach(function(item) {
+    cart.forEach(function (item) {
         totalItems += item.quantity;
     });
 
     // Update every cart count on the page
-    document.querySelectorAll(".count").forEach(function(count) {
+    document.querySelectorAll(".count").forEach(function (count) {
         count.textContent = totalItems;
     });
 }
 
 
-// ============================================================
 // SAVE CART TO LOCAL STORAGE
-// ============================================================
 
 function saveCart() {
     localStorage.setItem("deMelonCart", JSON.stringify(cart));
 }
 
 
-// ============================================================
 // SHOW NOTIFICATION
-// ============================================================
 
 function showMessage(message) {
 
@@ -65,15 +55,13 @@ function showMessage(message) {
 
     document.body.appendChild(messageBox);
 
-    setTimeout(function() {
+    setTimeout(function () {
         messageBox.remove();
     }, 2000);
 }
 
 
-// ============================================================
 // ADD PRODUCT TO CART
-// ============================================================
 
 function addToCart(card) {
 
@@ -87,7 +75,7 @@ function addToCart(card) {
 
 
     // Check whether product already exists
-    let existingProduct = cart.find(function(item) {
+    let existingProduct = cart.find(function (item) {
         return item.name === name;
     });
 
@@ -119,15 +107,13 @@ function addToCart(card) {
 }
 
 
-// ============================================================
 // UPDATE PRODUCT QUANTITY ON MENU
-// ============================================================
 
 function updateCardQuantity(card, name) {
 
     let quantitySpan = card.querySelector(".qty span");
 
-    let product = cart.find(function(item) {
+    let product = cart.find(function (item) {
         return item.name === name;
     });
 
@@ -144,15 +130,13 @@ function updateCardQuantity(card, name) {
 }
 
 
-// ============================================================
 // INCREASE QUANTITY
-// ============================================================
 
 function increaseQuantity(card) {
 
     let name = card.querySelector("h2").textContent.trim();
 
-    let product = cart.find(function(item) {
+    let product = cart.find(function (item) {
         return item.name === name;
     });
 
@@ -178,15 +162,13 @@ function increaseQuantity(card) {
 }
 
 
-// ============================================================
 // DECREASE QUANTITY
-// ============================================================
 
 function decreaseQuantity(card) {
 
     let name = card.querySelector("h2").textContent.trim();
 
-    let product = cart.find(function(item) {
+    let product = cart.find(function (item) {
         return item.name === name;
     });
 
@@ -202,7 +184,7 @@ function decreaseQuantity(card) {
     // Remove product when quantity becomes 0
     if (product.quantity <= 0) {
 
-        cart = cart.filter(function(item) {
+        cart = cart.filter(function (item) {
             return item.name !== name;
         });
 
@@ -218,24 +200,20 @@ function decreaseQuantity(card) {
 }
 
 
-// ============================================================
 // CONNECT ALL MENU BUTTONS
-// ============================================================
 
-document.querySelectorAll(".card").forEach(function(card) {
+document.querySelectorAll(".card").forEach(function (card) {
 
     let buttons = card.querySelectorAll(".qty button");
 
     let addButton = card.querySelector(".buttons > button");
 
 
-    // ------------------------------
     // ADD TO CART BUTTON
-    // ------------------------------
 
     if (addButton) {
 
-        addButton.addEventListener("click", function() {
+        addButton.addEventListener("click", function () {
 
             addToCart(card);
 
@@ -244,7 +222,7 @@ document.querySelectorAll(".card").forEach(function(card) {
 
             addButton.textContent = "Added ✓";
 
-            setTimeout(function() {
+            setTimeout(function () {
                 addButton.textContent = originalText;
             }, 1000);
 
@@ -253,13 +231,11 @@ document.querySelectorAll(".card").forEach(function(card) {
     }
 
 
-    // ------------------------------
     // MINUS BUTTON
-    // ------------------------------
 
     if (buttons[0]) {
 
-        buttons[0].addEventListener("click", function() {
+        buttons[0].addEventListener("click", function () {
 
             decreaseQuantity(card);
 
@@ -268,13 +244,11 @@ document.querySelectorAll(".card").forEach(function(card) {
     }
 
 
-    // ------------------------------
     // PLUS BUTTON
-    // ------------------------------
 
     if (buttons[1]) {
 
-        buttons[1].addEventListener("click", function() {
+        buttons[1].addEventListener("click", function () {
 
             increaseQuantity(card);
 
@@ -285,11 +259,9 @@ document.querySelectorAll(".card").forEach(function(card) {
 });
 
 
-// ============================================================
 // LOAD QUANTITY FROM LOCAL STORAGE
-// ============================================================
 
-document.querySelectorAll(".card").forEach(function(card) {
+document.querySelectorAll(".card").forEach(function (card) {
 
     let name = card.querySelector("h2").textContent.trim();
 
@@ -298,8 +270,6 @@ document.querySelectorAll(".card").forEach(function(card) {
 });
 
 
-// ============================================================
 // INITIAL CART COUNT
-// ============================================================
 
 updateCartCount();
